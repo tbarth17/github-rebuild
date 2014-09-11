@@ -1,11 +1,13 @@
 .repoListingContainer {
   width: 730px;
   position: relative;
-  margin-left: 50px; }
+  margin-left: 50px;
+  list-style: none; }
 
 .repoListing {
-  height: 112px;
   width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd; }
 
@@ -13,6 +15,24 @@
   text-decoration: none;
   color: #4183c4;
   font-family: Helvetica, arial, freesans, clean, sans-serif;
-  font-size: 20px; }
+  font-size: 20px;
+  font-weight: bold; }
   .repoTitle:hover {
     text-decoration: underline; }
+
+.rightSideTag {
+  float: right;
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-weight: bold;
+  color: #888888;
+  font-size: 12px; }
+  .rightSideTag > a {
+    color: #888888;
+    text-decoration: none; }
+    .rightSideTag > a:hover {
+      color: #4183c4; }
+
+.updated {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  color: #888888;
+  font-size: 13px; }
