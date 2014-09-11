@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>github-Rebuild</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.css">
+  <link rel="stylesheet" href="dist/styles/main.css">
+</head>
+<body>
+<div class="repoListingContainer"></div> <!--repoListingContainer-->
+  <script type="text/template" id="templates-listing">
+    <div class="repoListing">
+      <a class="repoTitle" href="<%= repoUrl %>"><%= repoTitle %></a>
+          <div class="rightSideTag">
+            <%= languageType %>
+            <a href="<%= stargazerUrl %>"><span class="octicon octicon-star"></span> <%= stargazerCount %></a>
+            <a href="<%= forksUrl %>"><span class="octicon octicon-git-branch"></span> <%= forksCount %></a>
+          </div> <!--rightSideTag-->
+        <span>Updated <%= timeSince %></span>
+      </div> <!--repolisting-->
+  </script> <!--templates-listing-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
