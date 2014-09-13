@@ -7,6 +7,82 @@
   <link rel="stylesheet" href="dist/styles/main.css">
 </head>
 <body>
+  <!-- topBar begin -->
+  <div class="topBarContainer"></div> <!-- topBarcontainer -->
+    <script type="text/template" id="topBar">
+      <a class="headerLogo" href="https://github.com/" aria-label="Homepage" ga-data-click="Header, go to dashboard, icon:logo">
+        <span class="mega-octicon octicon-mark-github"></span>
+      </a>
+      <div class="searchBar">
+<!--figure this out--><form accept-charset="UTF-8" action="https://www.github.com/search" class="searchForm" data-global-search-url="https://www.github.com/search" data-repo-search-url="" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+<!--figure this out--><input type="text" class="searchBar" data-hotkey="s" name="q" placeholder="Search GitHub" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" tabindex="1" autocapitalize="off">
+          </form>
+      </div><!--searchBar-->
+        <a href="https://github.com/explore"><span>Explore</span></a>
+        <a href="https://gist.github.com"><span>Gists</span></a>
+        <a href="https://github.com/blog"><span>Blog</span></a>
+        <a href="https://help.github.com"><span>Help</span></a>
+      <div class="topBarRight">
+        <a href="<%= userUrl %>"><img src="<%= userAvatar %>">
+          <span><%= userId %></span>
+        </a><!--userUrl-->
+        <a href="#"><!--newRepolink-->
+          <span class="octicon octicon-plus"></span>
+          <span class="octicon octicon-triangle-down"></span>
+        </a><!--newRepoLink-->
+        <a href="https://github.com/notifications">
+          <span class="octicon octicon-inbox"></span>
+        </a><!--notifications-->
+        <a href="https://github.com/settings/profile"><!--settings-->
+          <span class="octicon octicon-gear"></span>
+        </a><!--settings-->
+        <a href="#"><!--signout-->
+          <span class="octicon octicon-sign-out"></span>
+        </a><!--signout-->
+      </div><!--topBarRight-->
+    </script><!--topbar-->
+  <!--    topbar split      -->
+  <!--    userBar begin     -->
+  <div class="userBar"> </div><!--user-->
+    <script type="text/template" id="user">
+      <div class="userPhotoContainer">
+        <img src="<%= userAvatar %>" class="bigAvatar">
+      </div><!--userPhotoContainer-->
+      <div class="userNameIdContainer">
+        <p><%= userName %></p><p><%= userId %></p>
+      </div><!--userNameIdContainer-->
+    </script> <!--user-->
+  <!--    userBar end -->
+  <!--    joinedContainer begin -->
+  <div class="joinedContainer"></div><!--joinedContainer-->
+    <script type="text/template" id="joined">
+      <span class="octicon octicon-clock"></span><span>Joined on <%= joinedDate %>
+    </script>
+
+  <div class="followStarContainer">  </div><!--followStarContainer-->
+    <script type="text/template" id="followStarFollowing">
+      <div class="followersContainer">
+        <a href="<%= followersUrl %>"><%= followersNumber %>
+          <p>Followers</p></a>
+      </div><!--followersContainer-->
+      <div class="starredContainer">
+        <a href="<%= starredUrl %>"><%= starredNumber %>
+          <p>Starred</p></a>
+      </div><!--starredContainer-->
+      <div class="followingContainer">
+        <a href="<%= followingUrl %>"><%= followingNumber %>
+          <p>Following</p></a>
+      </div> <!--followingContainer-->
+    </script><!--followStarFollowing-->
+
+  <div class="organizationsContainer">  </div><!--organizationsContainer-->
+    <script type="text/template" id="organizations">
+    <p>Organizations</p>
+      <a href="https://github.com/'<%= organizationsName %>''">
+        <img src="<%= organizationsImg %>">
+      </a>
+    </script>
+
 <ul class="repoListingContainer"></ul> <!--repoListingContainer-->
   <script type="text/template" id="repo">
     <li class="repoListing">
@@ -17,12 +93,28 @@
             <a href="<%= forksUrl %>"><span class="octicon octicon-git-branch"></span> <%= forksCount %></a>
           </div> <!--rightSideTag-->
         <p class="updated">Updated <%= timeSince %></p>
-      </li> <!--repolisting-->
-  </script> <!--templates-listing-->
+      </li> <!--repoListing-->
+  </script> <!--repo-->
+  <!-- end repoListingContainer -->
+
+<div class="footer">
+  <span>© 2014 GitHub, Inc.</span>
+  <a href="https://github.com/site/terms"><span>Terms</span></a>
+  <a href="https://github.com/site/privacy"><span>Privacy</span></a>
+  <a href="https://github.com/security"><span>Security</span></a>
+  <a href="https://github.com/contact"><span>Contact</span></a>
+  <a href="https://github.com"><span class="mega-octicon octicon-mark-github"></span></a>
+  <a href="https://status/github.com"><span>Status</span></a>
+  <a href="developer.github.com"><span>API</span></a>
+  <a href="training.github.com"><span>Training</span></a>
+  <a href="shop.github.com"><span>Shop</span></a>
+  <a href="https://github.com/blog"><span>Blog</span></a>
+  <a href="https://github.com/about"><span>About</span></a>
+</div>
+
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.js"></script>
-  <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
