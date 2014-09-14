@@ -19,49 +19,60 @@
 <!--figure this out--><input type="text" class="searchBar" data-hotkey="s" name="q" placeholder="Search GitHub" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" tabindex="1" autocapitalize="off">
           </form>
       </div><!--searchBar-->
-      <ul class="exploreGistsBlogHelp">
-        <li class="exploreLink">
-        <a href="https://github.com/explore"><span>Explore</span></a></li>
-        <li>
+    <ul class="exploreGistsBlogHelp">
+      <li class="exploreLink">
+      <a href="https://github.com/explore"><span>Explore</span></a></li>
+      <li>
         <a href="https://gist.github.com"><span>Gist</span></a></li>
-        <li>
+      <li>
         <a href="https://github.com/blog"><span>Blog</span></a></li>
-        <li>
+      <li>
         <a href="https://help.github.com"><span>Help</span></a></li>
-      </ul><!--exploreGistsBlogHelp-->
-      <div class="topBarRight">
-        <a href="<%= userUrl %>"><img src="<%= userAvatar %>" class="smallUserAvatar">
-          <span><%= userId %></span>
-        </a><!--userUrl-->
-        <a href="#"><!--newRepolink-->
-          <span class="octicon octicon-plus"></span>
-          <span class="octicon octicon-triangle-down"></span>
-        </a><!--newRepoLink-->
-        <a href="https://github.com/notifications">
-          <span class="octicon octicon-inbox"></span>
-        </a><!--notifications-->
-        <a href="https://github.com/settings/profile"><!--settings-->
-          <span class="octicon octicon-gear"></span>
-        </a><!--settings-->
-        <a href="#"><!--signout-->
-          <span class="octicon octicon-sign-out"></span>
-        </a><!--signout-->
+    </ul><!--exploreGistsBlogHelp-->
+    <div class="topBarRight">
+      <ul class="topBarRightList">
+          <li>
+            <a href="<%= userUrl %>" class="topBarRightListLink"><img src="<%= userAvatar %>" class="smallUserAvatar">
+              <span class="userIdLink"><%= userId %></span>
+            </a><!--userUrl-->
+          </li>
+          <li>
+            <a href="#" class="topBarRightListLink"><!--newRepolink-->
+              <span class="octicon octicon-plus"></span>
+              <span class="octicon octicon-triangle-down"></span>
+            </a><!--newRepoLink-->
+          </li>
+          <li>
+            <a href="https://github.com/notifications" class="topBarRightListLink">
+              <span class="octicon octicon-inbox"></span>
+            </a><!--notifications-->
+          </li>
+          <li>
+            <a href="https://github.com/settings/profile" class="topBarRightListLink"><!--settings-->
+              <span class="octicon octicon-gear"></span>
+            </a><!--settings-->
+          </li>
+          <li class="listItemSignOut">
+            <a href="#" class="topBarRightListLink"><!--signout-->
+              <span class="octicon octicon-sign-out"></span>
+            </a><!--signout-->
+          </li>
+        </ul><!--topBarRightList-->
       </div><!--topBarRight-->
     </div> <!--topBarInnerContainer-->
   </script><!--topbar-->
   <!--    topbar split      -->
-  <!--    userBar begin     -->
 <div class="centerSectionContainer">
-  <div class="userBar"> </div><!--user-->
-    <script type="text/template" id="user">
-      <div class="userPhotoContainer">
-        <img src="<%= userAvatar %>" class="bigAvatar">
-      </div><!--userPhotoContainer-->
-      <div class="userNameIdContainer">
-        <p><%= userName %></p><p><%= userId %></p>
-      </div><!--userNameIdContainer-->
+  <!--    userBar begin     -->
+  <div class="sideBarContainer">
+    <div class="userBar"> </div><!--user-->
+      <script type="text/template" id="user">
+          <img src="<%= userAvatar %>" class="bigAvatar">
+        <div class="userNameIdContainer">
+          <p class="userBarName"><%= userName %></p><p class="userBarId"><%= userId %></p>
+        </div><!--userNameIdContainer-->
 
-    </script> <!--user-->
+      </script> <!--user-->
   <!--    userBar end -->
   <!--    joinedContainer begin -->
   <div class="joinedContainer"></div><!--joinedContainer-->
@@ -72,48 +83,47 @@
   <div class="followStarContainer">  </div><!--followStarContainer-->
     <script type="text/template" id="followStarFollowing">
       <div class="followersContainer">
-        <a href="<%= followersUrl %>"><%= followersNumber %>
+        <a href="<%= followersUrl %>" class="followStarTags"><span class="followStarStats"><%= followersNumber %></span>
           <p>Followers</p></a>
       </div><!--followersContainer-->
       <div class="starredContainer">
-        <a href="<%= starredUrl %>"><%= starredNumber %>
+        <a href="<%= starredUrl %>" class="followStarTags"><span class="followStarStats"><%= starredNumber %></span>
           <p>Starred</p></a>
       </div><!--starredContainer-->
       <div class="followingContainer">
-        <a href="<%= followingUrl %>"><%= followingNumber %>
+        <a href="<%= followingUrl %>" class="followStarTags"><span class="followStarStats"><%= followingNumber %></span>
           <p>Following</p></a>
       </div> <!--followingContainer-->
     </script><!--followStarFollowing-->
 
   <div class="organizationsContainer">  </div><!--organizationsContainer-->
     <script type="text/template" id="organizations">
-    <p>Organizations</p>
+    <p class="orgsTitle">Organizations</p>
       <a href="https://github.com/'<%= organizationsName %>''">
-        <img src="<%= organizationsImg %>">
+        <img src="<%= organizationsImg %>" class="orgAvatar">
       </a>
     </script>
+</div><!-- sideBarContainer-->
+<!-- end orgs section -->
 <div class="repoNavTopSection">
-<ul class="repoNavBar">
-  <li><a href="https:github.com/tbarth17">
-      <span><span class="octicon octicon-diff-added"></span>Contributions</span>
-  </a></li>
-  <li><a href="https://github.com/tbarth17?=repositories">
-    <span>
-      <span class="octicon octicon-repo"></span>Repositories</span>
-  </a></li>
-  <li><a href="https://github.com/tbarth17?=activity">
-    <span>
-      <span class="octicon octicon-rss">Public Activity</span>
-    </span>
-  </a></li>
-</ul><!-- repoNavBar -->
-  <a href="https://github.com/account">
-    <div class="editButton">
-      <span><span class="octicon octicon-pencil"></span>
+  <ul class="repoNavBar">
+    <a href="https:github.com/tbarth17" class="repoNavTopLinks  contributionsTab"><li class="repoNavBarListItem">
+        <span class="octicon octicon-diff-added"></span><span> Contributions</span>
+    </li></a>
+    <a href="https://github.com/tbarth17?=repositories" class="repoNavTopLinks repoNavSelectedTab"><li class="repoNavBarListItem">
+        <span class="octicon octicon-repo"></span><span> Repositories</span>
+    </li></a>
+    <a href="https://github.com/tbarth17?=activity" <a href="https://github.com/tbarth17?=repositories"class="repoNavTopLinks publicActivityTab"><li class="repoNavBarListItem">
+        <span class="octicon octicon-rss"></span><span> Public activity</span>
+    </li></a>
+  </ul><!-- repoNavBar -->
+    <a href="https://github.com/account" class="editButton">
+      <div>
+        <span><span class="octicon octicon-pencil"></span>
 Edit Profile</span>
-    </div><!--editbutton-->
-  </a><!--account-->
-</div><!--repoNavTopBar-->
+      </div><!--editbutton-->
+    </a><!--account-->
+  </div><!--repoNavTopBar-->
 
 <div class="repoNavBottomBar">
   <form action="/search" class="repo-search">

@@ -2,6 +2,7 @@
   outline: 1px solid red;
   margin: 0; }
 
+/* start top bar styling */
 .topBarContainer {
   display: inline-block;
   height: 28px;
@@ -71,16 +72,221 @@
 .topBarRight {
   float: right; }
 
+.topBarRightList > li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  display: block;
+  float: left;
+  list-style: none;
+  margin-left: 3px; }
+
+.topBarRightListLink {
+  font-family: Helvetica, sans serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none; }
+  .topBarRightListLink:hover {
+    color: #4183c4; }
+
+.octicon-plus {
+  font-size: 17px;
+  vertical-align: -1px; }
+
+.octicon-triangle-down {
+  font-size: 10px;
+  vertical-align: 2px; }
+
+.octicon-inbox {
+  font-size: 20px;
+  vertical-align: 5px; }
+
+.listItemSignOut {
+  margin-right: -7px; }
+
+.octicon-sign-out {
+  vertical-align: -1px; }
+
 .smallUserAvatar {
   height: 20px;
   width: 20px;
-  border-radius: 2px; }
+  border-radius: 2px;
+  margin-right: 2px; }
 
+.userIdLink {
+  vertical-align: 6px;
+  margin-right: -2px; }
+
+/* end top bar */
+.centerSectionContainer {
+  width: 980px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px; }
+  .centerSectionContainer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.sideBarContainer {
+  height: 555px;
+  width: 230px;
+  position: relative;
+  float: left; }
+
+/* begin user bar */
+.userBar {
+  width: 230px;
+  display: inline-block; }
+
+.bigAvatar {
+  height: 230px;
+  width: 230px;
+  border-radius: 6px; }
+
+.userNameIdContainer {
+  width: 230px;
+  height: 75px;
+  border-bottom: 1px solid #eeeeee; }
+
+.userBarName {
+  font-family: Helvetica, sans serif;
+  font-weight: bold;
+  font-size: 26px; }
+
+.userBarId {
+  font-family: Helvetice, sans serif;
+  font-size: 20px;
+  color: #746666; }
+
+/* end user bar */
+/* joinedContainer */
+.joinedContainer {
+  width: 230px;
+  height: 23px;
+  border-bottom: 1px solid #eeeeee;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+/* end joinedContainer */
+/* followStarContainer */
+.followStarContainer {
+  width: 230px;
+  height: 43px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eeeeee; }
+
+.followersContainer {
+  display: inline-block;
+  float: left;
+  width: 33.33%;
+  text-align: center; }
+
+.starredContainer {
+  display: inline-block;
+  float: left;
+  width: 33.33%;
+  text-align: center; }
+
+.followingContainer {
+  display: inline-block;
+  float: left;
+  width: 33.33%;
+  text-align: center; }
+
+.followStarTags {
+  font-size: 11px;
+  font-family: Helvetica, Sans serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #999999; }
+  .followStarTags:hover {
+    color: #4183c4; }
+
+.followStarStats {
+  font-size: 28px;
+  font-weight: bold;
+  font-family: Helvetica, Sans serif;
+  text-align: center;
+  color: #4183c4; }
+
+/* end followStarContainer */
+/* organizationsContainer */
+.organizationsContainer {
+  width: 230px;
+  height: 100px; }
+
+.orgsTitle {
+  font-family: Helvetice, Sans serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.orgAvatar {
+  height: 43px;
+  width: 43px;
+  float: left; }
+
+/* end organizationsContainer */
+/* repoNavTopBar */
+.repoNavTopSection {
+  height: 35px;
+  width: 730px;
+  position: relative;
+  border-bottom: 1px solid #dddddd;
+  float: right; }
+
+.repoNavBar {
+  display: table;
+  list-style: none;
+  float: left;
+  height: 35px;
+  width: 384px;
+  padding-left: 0; }
+
+.repoNavTopLinks {
+  font-family: Helvetica, sans serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  float: left;
+  color: #666666; }
+
+.contributionsTab {
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent; }
+
+.publicActivityTab {
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  margin-left: 4px; }
+
+.repoNavSelectedTab {
+  color: #333333;
+  border-radius: 3px 3px 0 0;
+  border: 1px solid #dddddd;
+  border-bottom: 1px solid white;
+  margin-left: 4px; }
+
+/* end repoNavTopBar */
+/* repoNavBottomBar */
 .repoListingContainer {
   width: 730px;
   position: relative;
-  margin-left: 50px;
-  list-style: none; }
+  list-style: none;
+  float: right;
+  padding-left: 0; }
 
 .repoListing {
   width: 100%;

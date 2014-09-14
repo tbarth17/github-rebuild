@@ -27,7 +27,7 @@ $.getJSON("https://api.github.com/users/tbarth17").done(function(user){
 
 $.getJSON("https://api.github.com/users/tbarth17").done(function(user){
   var userData = {
-      joinedDate: moment(user.created_at).format("MMM-Do-YYYY")};
+      joinedDate: moment(user.created_at).format("MMM Do, YYYY")};
     renderTemplate("joined", ".joinedContainer", userData);
   });
 
