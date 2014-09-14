@@ -1,3 +1,97 @@
+* {
+  outline:1px solid red;
+  margin: 0;
+}
+
+.topBarContainer {
+  display: inline-block;
+  height: 28px;
+  width: 100%;
+  min-width: 1000px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.topBarInnerContainer {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.headerLogo, .searchBarContainer, {
+  float: left;
+  margin-right: 8px;
+}
+
+.searchBarContainer {
+  margin-right: 10px;
+}
+
+.searchBar{
+  width: 330px;
+  height: 18px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 20px;
+  border-radius: 3px;
+  font-family: Helvetica, sans serif;
+  font-size: 12px;
+  border: 1px solid #cccccc;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+}
+
+.mega-octicon {
+  height: 28px;
+  width: 28px;
+  font-size: 28px;
+  margin-left: -3px;
+}
+
+.headerLogo {
+  height: 28px;
+  width: 28px;
+  color: #333333;
+
+    &:hover {
+      color: #4183c4;
+    }
+}
+
+.exploreGistsBlogHelp > li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  display: block;
+  float: left;
+  list-style: none;
+}
+
+.exploreGistsBlogHelp > li  > a {
+  font-family: Helvetica, sans serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;
+
+    &:hover {
+      color: #4183c4;
+    }
+}
+
+.topBarRight {
+  float: right;
+}
+
+.smallUserAvatar{
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+}
+
 .repoListingContainer {
   width: 730px;
   position: relative;
