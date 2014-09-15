@@ -77,7 +77,7 @@
   <!--    joinedContainer begin -->
   <div class="joinedContainer"></div><!--joinedContainer-->
     <script type="text/template" id="joined">
-      <span class="octicon octicon-clock"></span><span>Joined on <%= joinedDate %>
+      <span class="octicon octicon-clock"></span><span>  Joined on <%= joinedDate %>
     </script>
 
   <div class="followStarContainer">  </div><!--followStarContainer-->
@@ -117,23 +117,22 @@
         <span class="octicon octicon-rss"></span><span> Public activity</span>
     </li></a>
   </ul><!-- repoNavBar -->
-    <a href="https://github.com/account" class="editButton">
-      <div>
-        <span><span class="octicon octicon-pencil"></span>
-Edit Profile</span>
-      </div><!--editbutton-->
-    </a><!--account-->
+    <div class="buttonContainer">
+      <a href="https://github.com/account" class="editButton">
+        <span class="octicon octicon-pencil"></span><span> Edit profile</span>
+      </a><!--account-->
+    </div><!--editbutton-->
   </div><!--repoNavTopBar-->
 
 <div class="repoNavBottomBar">
-  <form action="/search" class="repo-search">
+  <form action="/search" class="repoSearch">
         <input type="hidden" name="user" value="tbarth17">
-        <input type="text" id="your-repos-filter" name="q" class="filter_input js-filterable-field" placeholder="Find a repository…" tabindex="2">
-        <input type="submit" value="Search" class="button">
+        <input type="text" id="your-repos-filter" name="q" class="repoSearchBox" placeholder="Find a repository…" tabindex="2">
+        <button type="button" value="Search" class="button">Search</button>
   </form>
   <ul class="repoFilter">
-    <li class="all">
-      <a href="#">
+    <li>
+      <a href="#" class="allTag">
         <span>All</span>
       </a>
     </li>
@@ -162,13 +161,13 @@ Edit Profile</span>
         <span>Mirrors</span>
       </a>
     </li>
-    <li>
-      <a href="/repositories/new" class="button primary new-repo">
-          <span class="octicon octicon-repo"></span>
-          New
-      </a>
-    </li>
   </ul>
+      <button class="newRepoButton">
+        <a href="/repositories/new" class="newRepo">
+            <span class="octicon octicon-repo"></span>
+            <span>New</span>
+        </a>
+      </button> <!--newRepoButton-->
 </div>
 
 <ul class="repoListingContainer"></ul> <!--repoListingContainer-->
@@ -186,19 +185,25 @@ Edit Profile</span>
   <!-- end repoListingContainer -->
 </div> <!-- centerSectionContainer -->
 <div class="footer">
-  <span>© 2014 GitHub, Inc.</span>
+  <div class="footerLeft">
+  <span class="gitHub">© 2014 GitHub, Inc.</span>
   <a href="https://github.com/site/terms"><span>Terms</span></a>
   <a href="https://github.com/site/privacy"><span>Privacy</span></a>
   <a href="https://github.com/security"><span>Security</span></a>
   <a href="https://github.com/contact"><span>Contact</span></a>
+</div> <!-- footerLeft -->
+<div class="footerCenter">
   <a href="https://github.com"><span class="mega-octicon octicon-mark-github"></span></a>
+</div> <!--footerCenter-->
+<div class="footerRight">
   <a href="https://status/github.com"><span>Status</span></a>
   <a href="developer.github.com"><span>API</span></a>
   <a href="training.github.com"><span>Training</span></a>
   <a href="shop.github.com"><span>Shop</span></a>
   <a href="https://github.com/blog"><span>Blog</span></a>
   <a href="https://github.com/about"><span>About</span></a>
-</div>
+</div> <!-- footerRight -->
+</div> <!-- footer -->
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
